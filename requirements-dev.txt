@@ -1,3 +1,5 @@
+sqlalchemy
 flake8
 pytest
 pre-commit
+sqlalchemy
