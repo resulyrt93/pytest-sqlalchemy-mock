@@ -18,5 +18,5 @@ class MockData:
             "is_admin": True,
             "city": "PA",
             "join_date": datetime(2009, 11, 20, 21, 3, 12),
-        }
+        },
     ]

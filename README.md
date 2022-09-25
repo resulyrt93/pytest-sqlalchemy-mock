@@ -1,4 +1,4 @@
-# pytest-sqlalchemy-mock
+# pytest-sqlalchemy-mock  👋
 [![PyPI version](https://badge.fury.io/py/pytest-sqlalchemy-mock.svg)](https://badge.fury.io/py/pytest-sqlalchemy-mock)
 [![CI](https://github.com/resulyrt93/pytest-sqlalchemy-mock/actions/workflows/tests.yaml/badge.svg?branch=dev)](https://github.com/resulyrt93/pytest-sqlalchemy-mock/actions/workflows/tests.yaml)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
@@ -35,7 +35,7 @@ Firstly SQLAlchemy base class which is used for declare models should be passed 
 def sqlalchemy_declarative_base():
     return Base
 ```
-Then in test functions you can get mocked_session fixture to make query in mocked DB.
+Then in test functions you can use `mocked_session` fixture to make query in mocked DB.
 
 **test_user_table.py**
 ```python
@@ -43,7 +43,7 @@ def test_mocked_session_user_table(mocked_session):
     user_data = mocked_session.execute("SELECT * from user;").all()
     assert user_data == []
 ```
-Also you can dump your mock data to DB before start testing via `sqlalchemy_mock_config` fixture like following.
+Also, you can dump your mock data to DB before start testing via `sqlalchemy_mock_config` fixture like following.
 
 **conftest.py**
 ```python
@@ -68,6 +68,6 @@ def test_mocked_session_user_class(mocked_session):
 ```
 
 ## Upcoming Features
-* Mock with decoratorsss
+* Mock with decorator for specific DB states for specific cases.
 * Support to load data from `.json` and `.csv`
 * Async SQLAlchemy support
