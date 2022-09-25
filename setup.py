@@ -17,8 +17,10 @@ setup(
     author="Resul Yurttakalan",
     author_email="resulyrt93@gmail.com",
     url="https://github.com/resulyrt93/pytest-sqlalchemy-mock",
-    package_dir={"": "pytest_sqlalchemy_mock"},
-    entry_points={"pytest11": ["sqlalchemy = pytest_sqlalchemy_mock"]},
+    packages=["pytest_sqlalchemy_mock"],
+    entry_points={
+        "pytest11": ["pytest_sqlalchemy_mock = pytest_sqlalchemy_mock.base"]
+    },
     install_requires=["pytest>=2.0", "sqlalchemy"],
     classifiers=[
         "Framework :: Pytest",
@@ -26,9 +28,9 @@ setup(
         "Topic :: Software Development :: Testing",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
 )
