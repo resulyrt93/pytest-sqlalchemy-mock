@@ -1,38 +1,13 @@
-from typing import TYPE_CHECKING, List, Tuple
+from typing import TYPE_CHECKING
 
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from .model_mocker import ModelMocker
+
 if TYPE_CHECKING:
     from sqlalchemy.orm import Session
-
-
-class ModelMocker:
-    # TODO make type annotations
-    _base = None
-    _mock_config: List[Tuple[str, List]] = None
-
-    def __init__(self, session, base, mock_config):
-        self._session: Session = session
-        self._base = base
-        self._mock_config = mock_config
-
-    def get_model_class_with_table_name(self, table_name: str):
-        for mapper in self._base.registry.mappers:
-            cls = mapper.class_
-            if cls.__tablename__ == table_name:
-                return cls
-
-    def create_all(self):
-        for model_config in self._mock_config:
-            table_name, data = model_config
-            model_class = self.get_model_class_with_table_name(table_name)
-            if model_class:
-                for datum in data:
-                    instance = model_class(**datum)
-                    self._session.add(instance)
-        self._session.commit()
 
 
 @pytest.fixture(scope="session")
