@@ -13,11 +13,11 @@ setup(
     description="pytest sqlalchemy plugin for mock",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    version="0.1.2",
+    version="0.1.3",
     author="Resul Yurttakalan",
     author_email="resulyrt93@gmail.com",
     url="https://github.com/resulyrt93/pytest-sqlalchemy-mock",
-    py_modules=["pytest_sqlalchemy_mock"],
+    package_dir={"": "pytest_sqlalchemy_mock"},
     entry_points={"pytest11": ["sqlalchemy = pytest_sqlalchemy_mock"]},
     install_requires=["pytest>=2.0", "sqlalchemy"],
     classifiers=[
