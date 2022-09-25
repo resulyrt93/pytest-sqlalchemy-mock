@@ -1,6 +1,5 @@
-import pytest
-
-from pytest_sqlalchemy_mock import *
+# TODO use pytester for testing
+from pytest_sqlalchemy_mock.base import *
 from tests.data import MockData
 from tests.db import Base
 

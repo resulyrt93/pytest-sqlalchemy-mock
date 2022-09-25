@@ -1,5 +1,4 @@
-name: Publish Python 🐍 distributions 📦 to PyPI
-
+name: Deploy
 on:
   push:
     tags:
