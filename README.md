@@ -1,6 +1,6 @@
 # pytest-sqlalchemy-mock
 [![PyPI version](https://badge.fury.io/py/pytest-sqlalchemy-mock.svg)](https://badge.fury.io/py/pytest-sqlalchemy-mock)
-![CI](https://github.com/resulyrt93/pytest-sqlalchemy-mock/actions/workflows/tests.yml/badge.svg?branch=dev)
+[![CI](https://github.com/resulyrt93/pytest-sqlalchemy-mock/actions/workflows/tests.yaml/badge.svg?branch=dev)](https://github.com/resulyrt93/pytest-sqlalchemy-mock/actions/workflows/tests.yaml)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
 This plugin provides pytest fixtures to create an in-memory DB instance on tests and dump your raw test data.
