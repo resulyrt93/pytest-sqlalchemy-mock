@@ -29,4 +29,4 @@ jobs:
           pre-commit run --all-files --show-diff-on-failure
       - name: Test with pytest
         run: |
-          pytest --codecov tests
+          pytest --codecov pytest_sqlalchemy_mock --cov-report=term-missing
