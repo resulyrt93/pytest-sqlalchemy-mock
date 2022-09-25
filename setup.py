@@ -12,7 +12,7 @@ setup(
     license='MIT',
     description='pytest sqlalchemy plugin for mock',
     # long_description=read("README.rst"),
-    version='0.1.0',
+    version='0.1.1',
     author='Resul Yurttakalan',
     author_email='resulyrt93@gmail.com',
     url='https://github.com/resulyrt93/pytest-sqlalchemy-mock',
