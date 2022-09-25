@@ -1,6 +1,6 @@
 sqlalchemy
 flake8
 pytest
-pytest-codecov
+pytest-cov
 pre-commit
 sqlalchemy
