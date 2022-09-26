@@ -3,4 +3,3 @@ flake8
 pytest
 pytest-cov
 pre-commit
-sqlalchemy
