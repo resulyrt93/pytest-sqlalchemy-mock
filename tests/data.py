@@ -20,3 +20,25 @@ class MockData:
             "join_date": datetime(2009, 11, 20, 21, 3, 12),
         },
     ]
+
+    DEPARTMENT_DATA = [
+        {
+            "id": 1,
+            "name": "Accounting",
+        },
+        {
+            "id": 2,
+            "name": "Sales",
+        },
+    ]
+
+    USER_DEPARTMENT_DATA = [
+        {
+            "user_id": 1,
+            "department_id": 1,
+        },
+        {
+            "user_id": 2,
+            "department_id": 2,
+        },
+    ]

@@ -11,4 +11,8 @@ def sqlalchemy_declarative_base():
 
 @pytest.fixture(scope="function")
 def sqlalchemy_mock_config():
-    return [("user", MockData.USER_DATA)]
+    return [
+        ("user", MockData.USER_DATA),
+        ("department", MockData.DEPARTMENT_DATA),
+        ("user_department", MockData.USER_DEPARTMENT_DATA),
+    ]

@@ -1,4 +1,4 @@
-sqlalchemy
+sqlalchemy==2.0.6
 flake8
 pytest
 pytest-cov
