@@ -13,8 +13,31 @@ Python 3.12 or later highly recommended but also might work on Python 3.11.
 
 ## Installation
 
+### Download from PyPI
+
 ```python
 pip install pytest-sqlalchemy-mock
+```
+
+### Building from source
+
+At the top direcotry,
+
+```sh
+python3 -m build
+python3 -m pip install dist/pytest_sqlalchemy_mock-*.whl
+```
+
+or
+
+```sh
+python3 -m pip install .
+```
+
+## Uninstall
+
+```sh
+python3 -m pip uninstall pytest_sqlalchemy_mock
 ```
 
 ## Usage
