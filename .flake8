@@ -1,0 +1,8 @@
+[flake8]
+exclude =
+    .git,
+    .github,
+    .venv,
+    build,
+    dist,
+    tests/conftest.py
