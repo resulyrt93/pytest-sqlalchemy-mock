@@ -50,6 +50,7 @@ force_grid_wrap = 2
 profile = "black"
 py_version = 312
 src_paths = ["src"]
+skip_glob = ["tests/conftest.py", "build/*", "dist/*",]
 
 [tool.pytest.ini_options]
 pythonpath = [
