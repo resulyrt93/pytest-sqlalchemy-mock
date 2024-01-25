@@ -32,6 +32,6 @@ jobs:
           pre-commit run --all-files --show-diff-on-failure
       - name: Test with pytest
         run: |
-          pytest --cov pytest_sqlalchemy_mock --cov-report=term-missing tests/
+          pytest --cov pytest_sqlalchemy_mock --cov-report=term-missing -s -vv tests/
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
