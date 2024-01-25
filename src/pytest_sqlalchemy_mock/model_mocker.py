@@ -3,7 +3,10 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from typing import List, Tuple
+    from typing import (
+        List,
+        Tuple,
+    )
 
     from sqlalchemy import Table
     from sqlalchemy.orm import Session

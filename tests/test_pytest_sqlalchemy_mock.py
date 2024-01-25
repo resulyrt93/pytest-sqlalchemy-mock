@@ -1,7 +1,10 @@
 from sqlalchemy import text
 
 from .data import MockData
-from .db import Department, User
+from .db import (
+    Department,
+    User,
+)
 
 
 def test_get_session(session):
@@ -13,10 +16,7 @@ def test_session_user_table(session):
 
 
 def test_session_query_for_assocation_table(session):
-    assert (
-        session.execute(text("SELECT count(*) from user_department")).scalar()
-        == 0
-    )
+    assert session.execute(text("SELECT count(*) from user_department")).scalar() == 0
 
 
 def test_mocked_session_user_table(mocked_session):

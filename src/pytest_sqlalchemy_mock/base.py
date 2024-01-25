@@ -45,15 +45,11 @@ def session(connection):
 
 
 @pytest.fixture(scope="function")
-def mocked_session(
-    connection, sqlalchemy_declarative_base, sqlalchemy_mock_config
-):
+def mocked_session(connection, sqlalchemy_declarative_base, sqlalchemy_mock_config):
     session: Session = sessionmaker()(bind=connection)
 
     if sqlalchemy_declarative_base and sqlalchemy_mock_config:
-        ModelMocker(
-            session, sqlalchemy_declarative_base, sqlalchemy_mock_config
-        ).create_all()
+        ModelMocker(session, sqlalchemy_declarative_base, sqlalchemy_mock_config).create_all()
 
     yield session
     session.close()
