@@ -1,8 +1,19 @@
 from typing import List
 
-from sqlalchemy import (Boolean, Column, DateTime, ForeignKey, Integer, String,
-                        func)
-from sqlalchemy.orm import Mapped, declarative_base, relationship
+from sqlalchemy import (
+    Boolean,
+    Column,
+    DateTime,
+    ForeignKey,
+    Integer,
+    String,
+    func,
+)
+from sqlalchemy.orm import (
+    Mapped,
+    declarative_base,
+    relationship,
+)
 from sqlalchemy.testing.schema import Table
 
 Base = declarative_base()
@@ -12,9 +23,7 @@ user_department_association_table = Table(
     "user_department",
     Base.metadata,
     Column("user_id", Integer, ForeignKey("user.id"), primary_key=True),
-    Column(
-        "department_id", Integer, ForeignKey("department.id"), primary_key=True
-    ),
+    Column("department_id", Integer, ForeignKey("department.id"), primary_key=True),
 )
 
 
